@@ -7,8 +7,9 @@
 :root {
   font-size: 62.5%;
 
+  --hue: 195;
   --color-white: hsl(0, 0%, 100%);
-  --color-bg-header: hsl(195, 46%, 40%);
+  --color-bg-blue: hsl(var(--hue), 46%, 40%);
   --color-bg-search: hsla(0, 0%, 100%, 0.2);
 }
 
@@ -23,8 +24,12 @@ header {
   justify-content: center;
   gap: 2.5rem;
 
-  background: var(--color-bg-header);
+  background: var(--color-bg-blue);
   padding: 1.2rem 2.8rem;
+}
+
+header svg path {
+  fill: var(--color-bg-blue);
 }
 
 header > img {
