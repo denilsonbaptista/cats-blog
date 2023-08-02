@@ -14,6 +14,7 @@
 
   --color-heading: hsl(240, 6%, 13%);
   --color-texting: hsl(240, 5%, 7%);
+  --color-bg-liked-disliked: hsl(var(--hue), 91%, 25%);
 }
 
 body {
@@ -115,6 +116,10 @@ button {
   background: none;
   border: 0;
   cursor: pointer;
+}
+
+button svg rect {
+  fill: var(--color-bg-liked-disliked);
 }
 
 .content p {
