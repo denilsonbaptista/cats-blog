@@ -22,6 +22,8 @@
 body {
   font-family: "Mulish", sans-serif;
   font-size: 1.6rem;
+
+  overflow-x: hidden;
 }
 
 header {
@@ -35,6 +37,9 @@ header {
   gap: 2.5rem;
 
   padding: 1.2rem 2.8rem;
+
+  --startY: -100%;
+  animation: moveY 0.2s;
 }
 
 header svg path {
@@ -81,6 +86,11 @@ form {
 
 .input-wrapper input:focus {
   outline: 1.5px solid var(--color-white);
+}
+
+main {
+  --startX: -100%;
+  animation: moveX 0.8s;
 }
 
 .img-content {
@@ -137,6 +147,9 @@ button svg rect {
 
 aside {
   padding: 0 2.8rem;
+
+  --startX: 100%;
+  animation: moveX 0.8s;
 }
 
 aside h2 {
@@ -200,6 +213,23 @@ footer {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+footer p {
+  --startY: 200%;
+  animation: moveY 0.2s;
+}
+
+@keyframes moveY {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes moveX {
+  0% {
+    transform: translateX(var(--startX));
+  }
 }
 
 @media (min-width: 1020px) {
